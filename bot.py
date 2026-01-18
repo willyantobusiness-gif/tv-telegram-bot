@@ -4,7 +4,7 @@ import requests
 BOT_TOKEN = "8582615236:AAFgWcmZ02r9mCWgtgQu7s9gLZ1gIIETjME"
 CHAT_ID = "8563927232"
 
-app = Flask(PickMeBot)
+app = Flask(__name__)
 
 def send_telegram(text):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
@@ -33,3 +33,4 @@ def webhook():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
+
